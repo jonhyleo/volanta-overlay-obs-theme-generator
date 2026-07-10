@@ -1,6 +1,6 @@
 # Volanta Overlay Theme Builder
 
-## ES
+## ESPAÑOL
 
 Aplicacion web creada con React + Vite para construir temas CSS para overlays de Volanta en OBS.
 
@@ -16,8 +16,8 @@ Aplicacion web creada con React + Vite para construir temas CSS para overlays de
 ### Limitaciones actuales
 
 - El CSS se construye contra la estructura HTML compartida en este proyecto. Si Volanta cambia ese DOM, habra que actualizar los selectores.
-- El targeting evita clases y usa selectores directos como `body`, `header`, `ol`, `img` y `nth-child(...)`.
-- El preview usa datos simulados realistas; no se conecta en vivo a Volanta ni a FS2020.
+- El targeting evita clases y usa selectores directos en el HTML.
+- El preview usa datos simulados realistas; no se conecta en vivo a Volanta ni a FS2020/FS2024.
 
 ### Requisitos
 
@@ -69,7 +69,7 @@ npm run build
 - `Import JSON`: carga un preset previamente exportado.
 - `Reset`: vuelve al preset base.
 
-## EN
+## ENGLISH
 
 React + Vite web app to build CSS themes for Volanta overlays used inside OBS.
 
@@ -85,8 +85,8 @@ React + Vite web app to build CSS themes for Volanta overlays used inside OBS.
 ### Current limitations
 
 - The generated CSS is aligned to the HTML structure captured in this project. If Volanta changes that DOM, selectors must be updated.
-- The stylesheet intentionally avoids class-based targeting and uses direct selectors such as `body`, `header`, `ol`, `img`, and `nth-child(...)`.
-- The preview still uses realistic mock data; it does not connect live to Volanta or FS2020.
+- The stylesheet intentionally avoids class-based targeting and uses direct HTML selectors.
+- The preview still uses realistic mock data; it does not connect live to Volanta or FS2020/FS2024.
 
 ### Requirements
 
