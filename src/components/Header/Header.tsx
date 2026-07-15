@@ -28,22 +28,6 @@ export const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
 						</ol>
 					</p>
 				</div>
-				{/*
-				<div>
-					<p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">Current output</p>
-					<p className="mt-2 text-lg font-semibold text-white">CSS for OBS custom browser source</p>
-				</div>
-				<div className="grid grid-cols-2 gap-3">
-					<div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-						<p className="text-xs uppercase tracking-[0.24em] text-slate-500">Preset</p>
-						<p className="mt-1 font-semibold text-white">{presetName}</p>
-					</div>
-					<div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-						<p className="text-xs uppercase tracking-[0.24em] text-slate-500">Saved</p>
-						<p className="mt-1 font-semibold text-white">{savedPresets.length} presets</p>
-					</div>
-				</div>
-        */}
 			</div>
 		</header>
 	);
