@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f00a9068-fa11-4d1e-8424-38bb28cdea2c/deploy-status)](https://app.netlify.com/projects/volantaoverlaythemebuilderforobs/deploys)
+
 # Volanta Overlay OBS Theme Builder
 
 ## ESPAÑOL
