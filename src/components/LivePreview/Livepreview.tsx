@@ -1,7 +1,8 @@
 interface Props {
 	previewDocument: string;
 }
-export const Livepreview = ({ previewDocument }: Props) => {
+
+const Livepreview = ({ previewDocument }: Props) => {
 	return (
 		<section className="space-y-6 rounded-[28px] border border-white/10 bg-slate-950/35 p-5 backdrop-blur sticky top-0 z-10 sticky:border-t-rounded-0">
 			<div className="flex items-end justify-between gap-4">
@@ -18,3 +19,5 @@ export const Livepreview = ({ previewDocument }: Props) => {
 		</section>
 	);
 };
+
+export default Livepreview;

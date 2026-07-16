@@ -6,7 +6,7 @@ interface Props {
 	statusMessage: string;
 }
 
-export const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
+const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
 	console.log("Header Log: ", { presetName, savedPresets, statusMessage });
 	return (
 		<header className="grid gap-5 rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_30px_80px_rgba(2,6,23,0.45)] backdrop-blur sm:grid-cols-[1.6fr_1fr] sm:p-8">
@@ -32,3 +32,5 @@ export const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
 		</header>
 	);
 };
+
+export default Header;
