@@ -2,7 +2,7 @@
 
 # Volanta Overlay OBS Theme Builder
 
-Visit the live app at [https://volanta-overlay-theme.netlify.app](https://volanta-overlay-theme.netlify.app)
+Visit the live app at [https://volantaoverlaythemebuilderforobs.netlify.app](https://volantaoverlaythemebuilderforobs.netlify.app)
 
 ## ESPAÑOL
 
