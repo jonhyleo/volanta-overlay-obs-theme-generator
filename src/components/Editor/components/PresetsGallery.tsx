@@ -12,18 +12,18 @@ const PresetsGallery = ({ savedPresets, deletePreset, applyPreset }: PresetsGall
 		<div className="space-y-3 bg-amber-50/5 px-4 py-3 rounded-2xl border border-white/10">
 			<div className="flex items-center justify-between gap-4 ">
 				<p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400 inline-block">Presets</p>
-				<p className="text-xs text-slate-500">
+				<div className="text-xs text-slate-500">
 					<div className="group relative inline-block">
-						<button className="">
+						<button className="block">
 							<BadgeInfo size={12} />
 						</button>
 
-						<div className="absolute bottom-full left-1/2 mb-2 w-max -translate-x-1/2 scale-75 opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 pointer-events-none">
-							<div className="rounded bg-gray-900 px-2 py-1 text-xs text-white shadow-lg">Stored in localStorage</div>
+						<div className="absolute bottom-full left-1/2 mb-2 w-max -translate-x-1/2 scale-75 opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 pointer-events-none z-20">
+							<p className="rounded bg-gray-900 px-2 py-1 text-xs text-white shadow-lg">Stored in localStorage</p>
 							<div className="absolute top-full left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1 bg-gray-900 rotate-45"></div>
 						</div>
 					</div>
-				</p>
+				</div>
 			</div>
 			<div className="grid gap-3 xl:grid-cols-3">
 				{savedPresets.map((preset) => (
