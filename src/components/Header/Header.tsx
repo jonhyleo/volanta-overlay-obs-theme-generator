@@ -1,13 +1,12 @@
-import type { StoredPreset } from "../../theme/types";
+//import type { StoredPreset } from "../../theme/types";
 
-interface Props {
+/* interface Props {
 	presetName: string;
 	savedPresets: StoredPreset[];
 	statusMessage: string;
-}
+} */
 
-const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
-	console.log("Header Log: ", { presetName, savedPresets, statusMessage });
+const Header = () => {
 	return (
 		<header className="grid gap-5 rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_30px_80px_rgba(2,6,23,0.45)] backdrop-blur sm:grid-cols-[1.6fr_1fr] sm:p-8">
 			<div className="space-y-4">
@@ -20,13 +19,13 @@ const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
 			<div className="grid gap-3 rounded-3xl border border-emerald-300/15 bg-slate-950/40 p-5 text-sm text-slate-300">
 				<div>
 					<p className="font-semibold text-white">Workflow</p>
-					<p className="mt-2">
+					<div className="mt-2">
 						<ol className="list-inside list-decimal">
 							<li>Adjust the controls.</li>
 							<li>Copy the CSS.</li>
 							<li>Paste it into the OBS browser source that renders the Volanta local HTML.</li>
 						</ol>
-					</p>
+					</div>
 				</div>
 			</div>
 		</header>
