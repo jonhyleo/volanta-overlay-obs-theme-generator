@@ -1,13 +1,42 @@
+import { useEffect, useState, useRef } from "react";
+import clsx from "clsx";
+
 interface Props {
 	previewDocument: string;
 }
 
 const Livepreview = ({ previewDocument }: Props) => {
+	const containerRef = useRef<HTMLDivElement>(null);
+	const [isSticky, setIsSticky] = useState(false);
+
+	// Attach scroll listener in effect to avoid accessing refs during render
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+
+		const handleScroll = () => {
+			const el = containerRef.current;
+			if (el) {
+				const { top } = el.getBoundingClientRect();
+				setIsSticky(top <= 0);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		handleScroll();
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
-		<section className="space-y-6 rounded-[28px] border border-white/10 bg-slate-950/35 p-5 backdrop-blur sticky top-0 z-10 sticky:border-t-rounded-0">
+		<section
+			ref={containerRef}
+			className={clsx("space-y-6 rounded-[28px] border border-white/10 bg-slate-950/35 p-0 mb-8 backdrop-blur sticky top-0 z-10", isSticky && "border-t-0 rounded-t-none")}
+		>
 			<div className="flex items-end justify-between gap-4">
 				<div>
-					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">Live Preview</p>
+					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400 p-5 pb-0 m-0">Live Preview</p>
 				</div>
 			</div>
 
