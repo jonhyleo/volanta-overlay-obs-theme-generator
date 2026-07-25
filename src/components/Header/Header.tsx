@@ -1,12 +1,13 @@
-//import type { StoredPreset } from "../../theme/types";
+import type { StoredPreset } from "../../theme/types";
 
-/* interface Props {
+interface Props {
 	presetName: string;
 	savedPresets: StoredPreset[];
 	statusMessage: string;
-} */
+}
 
-const Header = () => {
+const Header = ({ presetName, savedPresets, statusMessage }: Props) => {
+	console.log("Header rendered with props:", { presetName, savedPresets, statusMessage });
 	return (
 		<header className="grid gap-5 rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_30px_80px_rgba(2,6,23,0.45)] backdrop-blur sm:grid-cols-[1.6fr_1fr] sm:p-8">
 			<div className="space-y-4">
