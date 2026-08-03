@@ -182,7 +182,7 @@ function App() {
 	};
 
 	return (
-		<div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(75,210,180,0.12),transparent_35%),linear-gradient(180deg,#09111d_0%,#03060b_100%)] text-slate-100">
+		<div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(94,234,212,0.25),transparent_40%),linear-gradient(180deg,#0f2b38_0%,#0a192f_100%)] text-slate-100">
 			<div className="container mx-auto flex min-h-screen flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8">
 				<Header presetName={presetName} savedPresets={savedPresets} statusMessage={statusMessage} />
 
