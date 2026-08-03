@@ -42,7 +42,7 @@ const Livepreview = ({ previewDocument }: Props) => {
 
 			<iframe
 				title="Volanta overlay live preview"
-				className="w-full rounded-[22px] border border-white/8 bg-transparent select-none pointer-events-none"
+				className="w-full rounded-[22px] border border-white/0 bg-transparent select-none pointer-events-none"
 				srcDoc={previewDocument}
 			/>
 		</section>
