@@ -34,9 +34,9 @@ const Livepreview = ({ previewDocument }: Props) => {
 			ref={containerRef}
 			className={clsx("space-y-6 rounded-[28px] border border-white/10 bg-slate-950/35 p-0 mb-8 backdrop-blur sticky top-0 z-10", isSticky && "border-t-0 rounded-t-none")}
 		>
-			<div className="flex items-end justify-between gap-4">
+			<div className="flex items-end justify-between gap-4 mb-4">
 				<div>
-					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400 p-5 pb-0 m-0">Live Preview</p>
+					<p className="font-manrope text-sm font-bold uppercase tracking-[0.24em] text-slate-400 p-5 pb-0 m-0">Live Preview</p>
 				</div>
 			</div>
 
