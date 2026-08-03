@@ -46,8 +46,8 @@ export const buildPreviewDocument = (css: string, flight: FlightSnapshot) => `<!
 							</div>
 							<img src="${planeSrc}" class="" alt="Plane" />
 							<div class="">
+							<p class="">${flight.destination}</p>
 								<p class="">ARR</p>
-								<p class="">${flight.destination}</p>
 							</div>
 						</div>
 						<div class="3">
