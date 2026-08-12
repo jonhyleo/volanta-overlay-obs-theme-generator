@@ -26,7 +26,7 @@ const Output = ({ cssOutput, copyCss }: OutputProps) => {
 			<textarea
 				readOnly
 				value={cssOutput}
-				className="min-h-130 w-full rounded-3xl border border-white/10 bg-[#02050a] px-4 py-4 font-mono text-[12px] leading-6 text-emerald-100 outline-none resize-none"
+				className="min-h-130 w-full rounded-3xl border border-white/10 bg-[#02050a]/35 px-4 py-4 font-mono text-[12px] leading-6 text-emerald-100 outline-none resize-none"
 			/>
 		</section>
 	);
