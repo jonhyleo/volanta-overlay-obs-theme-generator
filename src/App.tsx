@@ -11,6 +11,9 @@ import Header from "./components/Header/Header";
 import Livepreview from "./components/LivePreview/Livepreview";
 import Editor from "./components/Editor/Editor";
 import Output from "./components/Output/Output";
+import GradientBG from "./components/GradientBG/GradientBG";
+import Modal from "./components/Modal/Modal";
+import { Info } from "lucide-react";
 
 const cloneTheme = (theme: OverlayTheme): OverlayTheme => structuredClone(theme);
 
@@ -37,6 +40,15 @@ function App() {
 	const [savedPresets, setSavedPresets] = useState<StoredPreset[]>(starterPresets);
 	const [presetName, setPresetName] = useState(defaultTheme.name);
 	const [statusMessage, setStatusMessage] = useState("Ready. Adjust the theme and copy the generated CSS.");
+
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+	const [modalText, setModalText] = useState<string>("");
+
+	const handleOpenModal = (e: React.MouseEvent<HTMLAnchorElement>, text: string) => {
+		e.preventDefault();
+		setModalText(text);
+		setIsModalOpen(true);
+	};
 
 	useEffect(() => {
 		const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
@@ -182,7 +194,15 @@ function App() {
 	};
 
 	return (
-		<div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(94,234,212,0.25),transparent_40%),linear-gradient(180deg,#0f2b38_0%,#0a192f_100%)] text-slate-100">
+		<div className="min-h-screen  text-slate-100">
+			<GradientBG />
+			<div className="fixed z-10">
+				<a href="!#" onClick={(e) => handleOpenModal(e, "Este es el texto pasado como parámetro al modal.")} noopener noreferrer>
+					<Info className="absolute top-5 left-5" size={36} />
+				</a>
+				<div className="inline-block w-0 h-0 border-solid border-t-[120px] border-r-[120px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-black/50 border-b-transparent"></div>
+			</div>
+
 			<div className="container mx-auto flex min-h-screen flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8">
 				<Header presetName={presetName} savedPresets={savedPresets} statusMessage={statusMessage} />
 
@@ -209,6 +229,8 @@ function App() {
 
 					<Output cssOutput={cssOutput} copyCss={copyCss} />
 				</main>
+
+				<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title="Confirmación" content={modalText} />
 			</div>
 		</div>
 	);
