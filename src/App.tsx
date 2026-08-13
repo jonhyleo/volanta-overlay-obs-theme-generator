@@ -197,7 +197,7 @@ function App() {
 		<div className="min-h-screen  text-slate-100">
 			<GradientBG />
 			<div className="fixed z-10">
-				<a href="!#" onClick={(e) => handleOpenModal(e, "Este es el texto pasado como parámetro al modal.")} noopener noreferrer>
+				<a href="!#" onClick={(e) => handleOpenModal(e, "Este es el texto pasado como parámetro al modal.")} rel="noopener noreferrer">
 					<Info className="absolute top-5 left-5" size={36} />
 				</a>
 				<div className="inline-block w-0 h-0 border-solid border-t-[120px] border-r-[120px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-black/50 border-b-transparent"></div>
