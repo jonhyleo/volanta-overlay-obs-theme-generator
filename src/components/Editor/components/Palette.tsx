@@ -10,13 +10,13 @@ const Palette = ({ theme, setPaletteValue }: PaletteProps) => {
 		<div className="flex items center justify-between gap-4">
 			<div className="space-y-3 w-full">
 				<p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400">Palette</p>
-				<div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+				<div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
 					{[
-						["primary", "Primary"],
-						["secondary", "Secondary"],
-						["tertiary", "Tertiary"],
-						["black", "Black"],
-						["white", "White"],
+						["primary", "Left"],
+						["secondary", "Center and Labels"],
+						["tertiary", "Right"],
+						/* ["black", "Black"], */
+						["white", "Values"],
 					].map(([key, label]) => (
 						<label key={key} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/3 px-3 py-3">
 							<input
