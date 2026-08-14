@@ -21,7 +21,7 @@ const Presets = ({ presetName, setPresetName, savePreset, copyCss, exportTheme, 
 				id="preset-name"
 				value={presetName}
 				onChange={(event) => setPresetName(event.target.value)}
-				className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition focus:border-emerald-300/50"
+				className="w-full rounded-2xl border border-white/10 bg-white/3 px-4 py-3 text-sm text-white outline-none transition focus:border-emerald-300/50"
 			/>
 			<div className="grid grid-cols-2 gap-3">
 				<button
