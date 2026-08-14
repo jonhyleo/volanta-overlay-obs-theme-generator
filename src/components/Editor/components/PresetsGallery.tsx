@@ -9,7 +9,7 @@ interface PresetsGalleryProps {
 
 const PresetsGallery = ({ savedPresets, deletePreset, applyPreset }: PresetsGalleryProps) => {
 	return (
-		<div className="space-y-3 bg-amber-50/5 px-4 py-3 rounded-2xl border border-white/10">
+		<div className="space-y-3 bg-white/3 px-4 py-3 rounded-2xl border border-white/10">
 			<div className="flex items-center justify-between gap-4 ">
 				<p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-400 inline-block">Presets</p>
 				<div className="text-xs text-slate-500">
@@ -27,16 +27,16 @@ const PresetsGallery = ({ savedPresets, deletePreset, applyPreset }: PresetsGall
 			</div>
 			<div className="grid gap-3 xl:grid-cols-3">
 				{savedPresets.map((preset) => (
-					<div key={preset.id} className="rounded-2xl border border-white/10 bg-white/3 p-4">
+					<div key={preset.id} className="rounded-2xl border border-white/10 bg-black/10 p-4">
 						<div className="flex items-start justify-between gap-3">
 							<div>
 								<p className="font-semibold text-white">{preset.theme.name}</p>
-								<p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">{new Date(preset.updatedAt).toLocaleDateString()}</p>
+								<p className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-400">{new Date(preset.updatedAt).toLocaleDateString()}</p>
 							</div>
 							<button
 								type="button"
 								onClick={() => deletePreset(preset.id)}
-								className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 px-2 py-1 transition hover:text-rose-300 hover:bg-rose-300/10 rounded-lg "
+								className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 px-2 py-1 transition hover:text-rose-300 hover:bg-rose-300/10 rounded-lg "
 							>
 								Delete
 							</button>
@@ -44,7 +44,7 @@ const PresetsGallery = ({ savedPresets, deletePreset, applyPreset }: PresetsGall
 						<button
 							type="button"
 							onClick={() => applyPreset(preset)}
-							className="flex items-center justify-center gap-2 mt-4 w-full rounded-2xl border border-white/12 px-4 py-3 text-sm font-semibold text-white transition hover:border-emerald-200/35 hover:bg-emerald-300/10"
+							className="flex items-center justify-center gap-2 mt-4 w-full rounded-2xl border border-white/12 px-4 py-3 text-sm font-semibold text-slate-100 transition hover:text-white hover:border-emerald-200/35 hover:bg-emerald-300/10"
 						>
 							<Check size={16} />
 							Apply preset
